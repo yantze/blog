@@ -1,14 +1,15 @@
 service:
   name: hexo
+
 provider:
   name: aliyun
   runtime: nodejs10
-functions:
-  render:
-    handler: render.handler
-    events:
-      - apigw:
-          path: /*
+
+# deployType:
+#   type: static
+#   config:
+#     rewrite:
+#       /(.*): /index.html
 
 package:
   include:

@@ -5,6 +5,8 @@ module.exports = (appInfo: any) => {
   exports.staticFile = {
     prefix: '/',
     dir: join(appInfo.baseDir, '../public'),
+    preload: false,
+    buffer: true,     // 注意，这里是 true
   };
   return exports;
 };

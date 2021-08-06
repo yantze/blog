@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "hexo server -p 3000",
     "build": "hexo generate",
     "clean": "hexo clean",
-    "dev": "npm run local:url & hexo server -p 3000",
-    "faas:dev": "npm run local:url & npx f invoke -p",
-    "sync": "yuque-hexo sync",
-    "local:url": "node scripts/local.js"
+    "deploy": "midway-bin deploy",
+    "dev": "midway-bin dev --ts",
+    "test": "midway-bin test --ts",
+    "sync": "yuque-hexo sync"
   },
   "midway-integration": {
     "lifecycle": {
@@ -31,8 +32,8 @@
   },
   "dependencies": {
     "@midwayjs/decorator": "^2.0.16",
-    "@midwayjs/faas": "^0.3.0",
-    "@midwayjs/faas-middleware-static-file": "^0.0.3",
+    "@midwayjs/faas": "^2.12.2",
+    "@midwayjs/faas-middleware-static-file": "^1.0.0",
     "hexo": "^4.2.1",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
@@ -44,11 +45,14 @@
     "hexo-server": "^1.0.0"
   },
   "devDependencies": {
-    "@midwayjs/faas-cli": "1.2.14",
-    "@midwayjs/fcli-plugin-fc": "*",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "typescript": "~3.7.2",
+    "@midwayjs/cli": "^1.2.45",
+    "@midwayjs/fcli-plugin-fc": "^1.2.45",
+    "@midwayjs/mock": "^2.8.7",
+    "@midwayjs/serverless-app": "^2.8.7",
+    "@midwayjs/web": "^2.12.1",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14",
+    "typescript": "^4.0.0",
     "yuque-hexo": "^1.7.0"
   }
 }

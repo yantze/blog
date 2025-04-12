@@ -6,12 +6,36 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "sync": "yuque-hexo sync",
+    "clean:yuque": "yuque-hexo clean"
   },
   "hexo": {
     "version": "7.3.0"
   },
-  "dependencies": {
+  "yuqueConfig": {
+    "postPath": "source/_posts",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "slug",
+    "adapter": "hexo",
+    "concurrency": 5,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "yantze",
+    "repo": "blog",
+    "onlyPublished": true,
+    "onlyPublic": false,
+    "lastGeneratePath": "lastGeneratePath.log",
+    "imgCdn": {
+      "enabled": true,
+      "concurrency": 10,
+      "imageBed": "oss",
+      "region": "oss-cn-hongkong",
+      "bucket": "vastiny-com",
+      "prefixKey": "_imgs"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
     "hexo": "^7.3.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
@@ -21,6 +45,7 @@
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "yuque-hexo": "^1.9.5"
   }
 }

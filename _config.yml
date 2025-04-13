@@ -101,11 +101,11 @@ theme: leedom2
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: aliyun
+  - type: ali-oss
     region: oss-cn-hongkong
     bucket: vastiny-com
-    accessKeyId: 待设置
-    accessKeySecret: 待设置
+    accessKeyId: 待处理
+    accessKeySecret: 待处理
     cacheControl:
       images: no-cache
       css: no-cache

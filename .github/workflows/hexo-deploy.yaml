@@ -2,8 +2,12 @@ name: Pages
 
 on:
   push:
-    branches:
-      - master # default branch
+    tags:
+      - '*' # 匹配任何标签名称
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - generate
 
 jobs:
   build:
@@ -16,6 +20,12 @@ jobs:
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
 
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
+
       - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
@@ -27,13 +37,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: 同步语雀文档
-        env:
-          YUQUE_TOKEN: ${{YUQUE_TOKEN}}
-          SECRET_ID: ${{SECRET_ID}}
-          SECRET_KEY: ${{SECRET_KEY}}
-        run: npm run sync
-
       - name: 缓存语雀文档
         uses: actions/cache@v4
         with:
@@ -41,6 +44,13 @@ jobs:
           key: ${{ runner.OS }}-yuque-cache
           restore-keys: |
             ${{ runner.OS }}-yuque-cache
+
+      - name: 同步语雀文档
+        env:
+          YUQUE_TOKEN: ${{secrets.YUQUE_TOKEN}}
+          SECRET_ID: ${{secrets.SECRET_ID}}
+          SECRET_KEY: ${{secrets.SECRET_KEY}}
+        run: npm run sync
 
       - name: Build
         run: npm run build
@@ -52,8 +62,9 @@ jobs:
 
       - name: Deploy to Aliyun
         run: |
-          hexo config deploy.0.accessKeyId ${{SECRET_ID}}
-          hexo config deploy.0.accessKeyId ${{SECRET_KEY}}
+          npm install hexo-cli -g
+          hexo config deploy.0.accessKeyId ${{secrets.SECRET_ID}}
+          hexo config deploy.0.accessKeyId ${{secrets.SECRET_KEY}}
           npm run deploy
   deploy:
     needs: build

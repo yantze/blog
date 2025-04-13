@@ -29,12 +29,23 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
+      - name: 同步语雀文档
+        env:
+          YUQUE_TOKEN: ${{YUQUE_TOKEN}}
+          SECRET_ID: ${{SECRET_ID}}
+          SECRET_KEY: ${{SECRET_KEY}}
+        run: npm run sync
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Deploy to Aliyun
+        run: |
+          hexo config deploy.0.accessKeyId ${{SECRET_ID}}
+          hexo config deploy.0.accessKeyId ${{SECRET_KEY}}
+          npm run deploy
   deploy:
     needs: build
     permissions:

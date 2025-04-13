@@ -1,0 +1,32 @@
+<div class="footer">
+  <% if (theme.scripts) { %>
+    <% for(let item of theme.scripts){ %>
+        <% if (item.path) { %>
+          <script src="<%- item.path %>"
+            id="<%- item.id %>"
+          ></script>
+        <% } %>  
+    <% } %>
+  <% } %>
+  <% for(let item of theme.footer){ %>
+    <div class="footer-more">
+      <% if (item.path) { %>
+        <a href="<%- item.path %>"><%- item.name %></a>
+      <% } else { %>
+        <%- item.name %>
+      <% } %>  
+    </div>
+  <% } %>
+  <% if (theme.google_analytics) { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<%= theme.google_analytics %>');
+    </script>
+    <!-- End Google Analytics -->
+  <% } %>  
+</div>

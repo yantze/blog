@@ -17,7 +17,7 @@ favicon:
 # 用户头像与昵称
 avatar:
   author_photo: /images/avatar.png
-  author_nickname: anqi
+  author_nickname: Vastiny
   path: /
 
 # 文章末尾的上一页与下一页
@@ -30,55 +30,57 @@ link:
   # icon: 图标，目前仅支持IconFont部分图标
   # path: 地址
   # target: 跳转方式
-  -
-    # 档案
-    name: archives
-    icon: bookmark
-    path: /archives/
-  -
-    name: github
-    icon: github
-    path: https://github.com/leedom92/hexo-theme-leedom
-    target: _blank
-  -
-    name: email
-    icon: envelope
-    path:
-  -
-    name: facebook
-    icon: facebooksquare
-    path:
+  # -
+  #   # 档案
+  #   name: archives
+  #   icon: bookmark
+  #   path: /archives/
   -
     name: twitter
     icon: twitter
-    path:
-  -
-    name: wechat
-    icon: wechat
-    path:
-  -
-    name: weibo
-    icon: weibo
-    path:
-  -
-    # rss需安装 hexo-generator-feed 插件
-    # 具体参照https://github.com/hexojs/hexo-generator-feed
-    name: rss
-    icon: rss
-    path: /atom.xml
+    path: https://twitter.com/ivastiny
     target: _blank
+  -
+    name: github
+    icon: github
+    path: https://github.com/yantze
+    target: _blank
+  # -
+    # rss需安装 hexo-generator-feed 插件
+    # 具体参照 https://github.com/hexojs/hexo-generator-feed
+    # name: rss
+    # icon: rss
+    # path: /atom.xml
+    # target: _blank
 
 
 # 页脚信息
 footer:
   -
-    name: Copyright © Leedom 2021
-    path: https://github.com/leedom92/hexo-theme-leedom
+    name: Copyright © Vastiny 2026 :P
+    path: https://vastiny.com
   -
     name: Theme by Leedom | Powered by Hexo
     path: https://github.com/leedom92/hexo-theme-leedom
 
 # 文章搜索
 search:
-  enable: true
+  enable: false
   placeholder:
+
+# rss
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+
+google_analytics: G-WJ1ZY9QR8J

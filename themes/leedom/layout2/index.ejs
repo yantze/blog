@@ -1,17 +1,7 @@
 <div>
   <ul>
     <!-- 遍历渲染文章 -->
-    <% page.posts.forEach(function(item) {
-      var show = true;
-        if ((item.lang) === page.lang) {
-          show = true;
-        } else if (!item.lang && page.lang === 'zh-CN') {
-          show = true;
-        } else {
-          show = false;
-        }
-    %>
-        <% if (show) { %>
+    <% page.posts.forEach(function(item) { %>
       <li>
         <h3><%- item.date.format('MMM DD, YYYY') %></h3>
         <h2>
@@ -29,16 +19,15 @@
           </a>
         </h2>
       </li>
-        <% } %>
       <% }) %>
   </ul>
 
   <nav class="post-navigation">
     <% if(page.prev !==0){ %>
-      <a id="prev" class="index-nav" href="<%- url_for_lang(page.prev_link)%>">&lt;&nbsp;NEWER</a>
+      <a id="prev" class="index-nav" href="<%- url_for(page.prev_link)%>">&lt;&nbsp;NEWER</a>
       <% } %>
         <% if(page.next !==0){ %>
-          <a id="next" class="index-nav" href="<%- url_for_lang(page.next_link)%>">OLDER&nbsp;&gt;</a>
+          <a id="next" class="index-nav" href="<%- url_for(page.next_link)%>">OLDER&nbsp;&gt;</a>
           <% } %>
   </nav>
 </div>

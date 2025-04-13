@@ -26,7 +26,7 @@
       <div class="post-item" title="<%- item.title %>">
         <div class="time-m-d"><%- item.date.format("MM-DD") %></div>
         <div class="title">
-          <a href="<%- url_for_lang(item.path) %>">
+          <a href="<%- url_for(item.path) %>">
             <% if(item.title !== "") { %>
               <span><%- item.title %></span>
             <% } else { %>

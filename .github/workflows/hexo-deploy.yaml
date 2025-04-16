@@ -64,7 +64,7 @@ jobs:
         run: |
           npm install hexo-cli -g
           hexo config deploy.0.accessKeyId ${{secrets.SECRET_ID}}
-          hexo config deploy.0.accessKeyId ${{secrets.SECRET_KEY}}
+          hexo config deploy.0.accessKeySecret ${{secrets.SECRET_KEY}}
           npm run deploy
   deploy:
     needs: build

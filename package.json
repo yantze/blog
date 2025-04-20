@@ -18,7 +18,7 @@
     "cachePath": "yuque.json",
     "mdNameFormat": "slug",
     "adapter": "hexo",
-    "concurrency": 5,
+    "concurrency": 3,
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "annlomachenko",
     "repo": "sn36f2",

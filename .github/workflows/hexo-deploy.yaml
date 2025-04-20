@@ -37,13 +37,13 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: 缓存语雀文档
-        uses: actions/cache@v4
-        with:
-          path: yuque.json
-          key: ${{ runner.OS }}-yuque-cache
-          restore-keys: |
-            ${{ runner.OS }}-yuque-cache
+      # - name: 缓存语雀文档
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: yuque.json
+      #     key: ${{ runner.OS }}-yuque-cache
+      #     restore-keys: |
+      #       ${{ runner.OS }}-yuque-cache
 
       - name: 同步语雀文档
         env:

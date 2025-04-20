@@ -7,28 +7,33 @@ favicon:
 # 用户头像与昵称
 avatar:
   author_photo: /images/avatar.png
-  author_nickname: Vastiny
+  author_nickname: ANQI.ROCKS
   path: /
 
 # 页脚信息
 footer:
   -
-    name: Copyright © Vastiny 2026 :P
-    path: https://vastiny.com
+    name: Copyright © ANQI.ROCKS 2026 :P
+    path: https://anqi.rocks
   -
     name: Theme by Leedom | Powered by Hexo
     path: https://github.com/leedom92/hexo-theme-leedom
 
 link:
   -
-    name: twitter
-    icon: twitter
-    path: https://twitter.com/ivastiny
+    name: email
+    icon: envelope
+    path: mail:zhanganqi0027@gmail.com
     target: _blank
   -
-    name: github
-    icon: github
-    path: https://github.com/yantze
+    name: twitter
+    icon: twitter
+    path: https://twitter.com/AnqiRocks
+    target: _blank
+  -
+    name: linkedin
+    icon: linkedin
+    path: https://www.linkedin.com/in/%E5%AE%89%E7%90%AA-%E5%BC%A0-93037110b/
     target: _blank
 
-google_analytics: G-WJ1ZY9QR8J
+google_analytics: G-9EVKH3XZBX

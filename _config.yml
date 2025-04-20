@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Vastiny
+title: ANQI.ROCKS
 subtitle: ''
-description: 'Hi 与天，这是你写博客的地方。技术、思考。'
-keywords:
-author: yantze
+description: 'A builder and problem solver at heart and enjoy bringing cutting-edge technology to make meaningful impacts. My passion is to create delightful customer experience through innovation.'
+keywords: 'AnqiZhang,ProductManager,Search,KnowledgeGraph,ByteDance,Ecommerce,Personalization'
+author: anqi
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://vastiny.com
-permalink: post/:name.html
+url: https://anqi.rocks
+permalink: :year/:month/:day/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -96,14 +96,14 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: leedom2
+theme: leedom
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   - type: ali-oss
     region: oss-cn-hongkong
-    bucket: vastiny-com
+    bucket: anqi-rocks
     accessKeyId: 待处理
     accessKeySecret: 待处理
     cacheControl:

@@ -30,7 +30,7 @@
       "concurrency": 10,
       "imageBed": "oss",
       "region": "oss-cn-hongkong",
-      "bucket": "vastiny-com",
+      "bucket": "anqi-rocks",
       "prefixKey": "_imgs"
     }
   },

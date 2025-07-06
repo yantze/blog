@@ -1,0 +1,37 @@
+# Comment
+# e.g disqus: claymcleod
+disqus:
+
+# Analytics
+ga: G-WJ1ZY9QR8J
+
+# Copyright Infomation
+startyear: 2018
+
+# Image Credits
+enable_image_credit: true
+
+logo: /images/favicon.png
+# 网站图标
+favicon:
+  enable: true
+  icon: /images/favicon.png
+  touch_icon: /images/favicon.png
+
+# 用户头像与昵称
+avatar:
+  author_photo: /images/avatar.png
+  author_nickname: Vastiny
+  path: /
+
+# 页脚信息
+footer:
+  - name: Copyright © Vastiny 2026 :P
+    path: https://vastiny.com
+  - name: Theme by Leedom | Powered by Hexo
+    path: https://github.com/leedom92/hexo-theme-leedom
+
+menu:
+  Blog: /
+  GitHub: https://github.com/yantze
+  Feed: atom.xml

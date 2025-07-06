@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "hexo": "^7.3.0",
-    "hexo-deployer-ali-oss-extend": "^1.0.1",
-    "hexo-generator-archive": "^2.0.0",
+    "hexo-deployer-ali-oss-extend": "^2.0.0",
+    "hexo-generator-archive": "latest",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-i18n": "^0.0.10",
     "hexo-generator-index": "^4.0.0",
@@ -49,5 +49,12 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "yuque-hexo": "^1.9.5"
+  },
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
+  "dependencies": {
+    "hexo-browsersync": "^0.3.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-sitemap": "^3.0.1",
+    "hexo-renderer-pug": "^3.0.0"
   }
 }

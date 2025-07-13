@@ -9,8 +9,6 @@
         font-size: 1rem;
     }
     .post-title-link {
-        display: block;
-        margin-left: 125px;
         color: #5454f8;
         word-break: break-all;
         &:hover {
@@ -20,7 +18,7 @@
     }
     .post-info {
         float: left;
-        width: 125px;
+        width: 140px;
         color: #7f8c8d;
     }
 }

@@ -32,7 +32,6 @@ footer:
     path: https://github.com/leedom92/hexo-theme-leedom
 
 menu:
-    GitHub: https://github.com/yantze
-    Twitter: https://x.com/ivastiny
-    X.QINGRIZHI: https://x.qingrizhi.com
-    Feed: atom.xml
+  GitHub: https://github.com/yantze
+  Twitter: https://x.com/ivastiny
+  Feed: atom.xml

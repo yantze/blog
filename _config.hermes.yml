@@ -21,8 +21,9 @@ logo: /images/favicon.png
 # 网站图标
 favicon:
   enable: true
-  icon: /images/favicon.png
-  touch_icon: /images/favicon.png
+  icon: /images/custom-icon.png
+  ico: /images/custom-icon.ico
+  touch_icon: /images/custom-icon-touch.png
 
 # 用户头像与昵称
 avatar:

@@ -15,19 +15,13 @@ startyear: 2018
 # Image Credits
 enable_image_credit: true
 
-# Logo 与导航图标
-logo: /images/favicon.png
-
+logo: /images/fav/favicon.png
 # 网站图标
-favicon:
-  enable: true
-  icon: /images/favicon.png
-  ico: /images/custom-icon.ico
-  touch_icon: /images/favicon.png
+favicon: /images/fav/favicon-48x48.png
 
 # 用户头像与昵称
 avatar:
-  author_photo: /images/avatar.png
+  author_photo: /images/favicon.png
   author_nickname: Vastiny
   path: /
 

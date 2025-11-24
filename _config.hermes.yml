@@ -10,10 +10,10 @@ disqus:
 ga: G-WJ1ZY9QR8J
 
 # Copyright Information
-startyear: 2018
+startyear: 2015
 
 # Image Credits
-enable_image_credit: true
+enable_image_credit: false
 
 logo: /images/fav/favicon.png
 # 网站图标
